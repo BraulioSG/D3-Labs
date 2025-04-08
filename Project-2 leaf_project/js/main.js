@@ -65,7 +65,7 @@ d3.json("data/data.json").then(function(data){
     });
 
     var legend = group.append("g").
-        attr("transform", `translate(${SVG_WIDTH} - 10, ${SVG_HEIGHT} - 125)`);
+        attr("transform", `translate(${SVG_WIDTH - 10}, ${SVG_HEIGHT - 125})`);
 
     var continents = ["europe", "asia", "americas", "africa"];
     continents.forEach((continent, i) => {

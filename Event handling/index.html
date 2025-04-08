@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <title>Leaf Project</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Custom styling -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img id="logo" src="img/logo.png"></a>      
+        </div>
+    </nav>
+
+    <!-- UI interaction -->
+    <div class="container">
+        <div class="row">
+            <button id="play" class="col-sm-1 btn btn-primary">Play</button>
+            <button id="reset" class="col-sm-1 btn btn-danger">Reset</button>
+            <div class="col-sm-4">
+                <label id="years-label" for="years" class="form-label">Year 1800</label>
+                <input type="range" id="years" min=0 max=215 class="form-range">
+            </div>
+            <select id="continents" class="col-md-1 form-select form-select-sm">
+                <option value="all">all</option>
+                <option value="europe">europe</option>
+                <option value="asia">asia</option>
+                <option value="americas">america</option>
+                <option value="africa">africa</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Bootstrap grid setup -->
+    <div class="container">
+        <div class="row">
+            <div id="chart-area"></div>  
+        </div>
+    </div>
+
+<!-- External JS libraries -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/d3.min.js"></script>
+<!-- Custom JS -->
+<script src="js/main.js"></script>
+
+</body>
+</html>

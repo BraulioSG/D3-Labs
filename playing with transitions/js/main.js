@@ -54,11 +54,12 @@ function update(data){
 
 
     var rects =group.selectAll("rect").data(data);
-    rects.exit().remove()
-    rects.attr("y", (d) => { return y(d[value]); }).
+    rects.exit().transition(tran).remove()
+    rects.transition(tran).
+        attr("y", (d) => { return y(d[value]); }).
         attr("x", (d) => { return x(d.month); }).
         attr("height", (d) => { return SVG_HEIGHT - y(d[value]); })
-    rects.enter().append("rect").
+    rects.enter().append("rect").transition(tran).
         attr("x", data => {return x(data.month)} ).
         attr("y", data => {return y(data[value])}).
         attr("width", 30).
